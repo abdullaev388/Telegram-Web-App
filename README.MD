@@ -28,7 +28,7 @@ In order to run this project, you need to
 <ul>
     <li>Have Domain name</li>
     <li>Configure nginx</li>
-    <li>SSL Certificate (for https)</li>
+    <li>Get SSL Certificate (for https)</li>
 </ul>
 First, if you are not familiar with nginx, you should watch 
 <a href="https://www.youtube.com/watch?v=goToXTC96Co&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH&index=14">this video</a>
