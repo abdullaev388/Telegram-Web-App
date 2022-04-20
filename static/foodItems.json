@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Pizza",
+    "price": 3.30,
+    "imgLink": "https://cdn-icons-png.flaticon.com/512/1404/1404945.png"
+  },
+  {
+    "name": "Burger",
+    "price": 2.50,
+    "imgLink": "https://cdn-icons-png.flaticon.com/512/3075/3075977.png"
+  },
+  {
+    "name": "Salad",
+    "price": 2.20,
+    "imgLink": "https://cdn-icons-png.flaticon.com/512/415/415693.png"
+  },
+  {
+    "name": "Soda",
+    "price": 1,
+    "imgLink": "https://cdn-icons-png.flaticon.com/512/1046/1046782.png"
+  }
+]
