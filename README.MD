@@ -1,4 +1,4 @@
-**Telegram on Aril 16th introduced BOT API version 6.0**
+**Telegram on April 16th introduced BOT API version 6.0**
 <br><br>
 
 In this update, they introduced **Web Apps.**<br>
