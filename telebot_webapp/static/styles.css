@@ -1,0 +1,245 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Verdana, sans-serif;
+}
+
+:root {
+    --body-background-color: white;
+    --title-color: black;
+    --sub-text-color: black;
+}
+
+body {
+    background-color: var(--body-background-color);
+}
+
+button {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.title {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 25px;
+    color: var(--title-color);
+}
+
+.food-items {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 120px);
+    justify-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.food-item {
+    position: relative;
+}
+
+.food-item__icon {
+    width: 70px;
+    height: 70px;
+    display: block;
+    margin: 0 auto;
+}
+
+.food-item__info {
+    margin: 5px 0;
+    display: flex;
+    column-gap: 10px;
+    font-weight: 700;
+    color: var(--sub-text-color);
+}
+
+.food-item__price {
+    text-decoration: underline;
+}
+
+.food-item__buttons {
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.food-item__button {
+    display: block;
+    height: 30px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.food-item__button[data-remove] {
+    position: absolute;
+    width: 0;
+    background-color: orange;
+}
+
+.food-item__button[data-add] {
+    position: absolute;
+    left: 0;
+    right: 0;
+    transition: left .3s;
+    background-color: orangered;
+}
+
+.food-item__count {
+    color: white;
+    font-weight: 700;
+    position: absolute;
+    top: -5px;
+    right: -20px;
+    background-color: orange;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    opacity: 0;
+}
+
+.cart {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-100%);
+    background-color: var(--body-background-color);
+    transition: transform .3s;
+}
+
+.cart.active {
+    transform: translateX(0);
+}
+
+.cart .title {
+    text-align: unset;
+    font-weight: 700;
+}
+
+.cart__total-price {
+    width: 85%;
+    margin: 5px auto 0 auto;
+    color: var(--sub-text-color);
+    font-weight: 700;
+}
+
+.cart__total-price.fluctuate {
+    animation: fluctuate .3s alternate 1 .3s;
+}
+
+.cart-title-wrapper {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    width: 85%;
+    margin: 10px auto;
+}
+
+.cart__further {
+    border: none;
+    background-color: #12a662;
+    border-radius: 5px;
+    padding: 6px 10px;
+    color: white;
+    outline: none;
+    font-weight: 700;
+}
+
+.cart__items {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    margin: 50px auto 0 auto;
+    width: 85%;
+}
+
+.cart-item__price {
+    margin-top: 5px;
+    font-weight: 700;
+    color: var(--sub-text-color);
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-item__icon {
+    width: 50px;
+    height: 50px;
+}
+
+.cart-item__item {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+}
+
+.cart-item__wrapper {
+    display: flex;
+    column-gap: 5px;
+    font-weight: 700;
+    color: var(--sub-text-color);
+}
+
+.cart-item__amount {
+    color: orange;
+}
+
+.cart-item__buttons {
+    margin-top: 2px;
+    display: flex;
+    column-gap: 5px;
+}
+
+.cart-item__button {
+    border: none;
+    border-radius: 5px;
+    width: 22px;
+    height: 22px;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-item__button[data-add] {
+    background-color: orange;
+}
+
+.cart-item__button[data-remove] {
+    background-color: orangered;
+}
+
+@keyframes fluctuate {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(4px);
+    }
+
+    50% {
+        transform: translateX(0);
+    }
+
+    75% {
+        transform: translateX(-4px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}

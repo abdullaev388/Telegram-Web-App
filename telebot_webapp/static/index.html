@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="/static/script.js" defer></script>
+    <title>Web app</title>
+</head>
+<body>
+<h1 class="title">Web App Food store</h1>
+<div class="food-items"></div>
+<div class="cart">
+    <div class="cart-title-wrapper">
+        <div class="title">Your order</div>
+        <button class="cart__further">Submit &#x2192;</button>
+    </div>
+    <div class="cart__total-price">$0.0</div>
+    <div class="cart__items"></div>
+</div>
+
+<template id="food-item">
+    <div class="food-item">
+        <img alt="food" class="food-item__icon">
+        <div class="food-item__info">
+            <div class="food-item__name"></div>
+            <div class="food-item__price"></div>
+        </div>
+        <div class="food-item__buttons">
+            <button class="food-item__button" data-remove>-</button>
+            <button class="food-item__button" data-add>Add</button>
+        </div>
+        <div class="food-item__count"></div>
+    </div>
+</template>
+
+<template id="cart-item">
+    <div class="cart-item">
+        <div class="cart-item__item">
+            <img alt="food" class="cart-item__icon">
+            <div class="cart-item__info">
+                <div class="cart-item__wrapper">
+                    <div class="cart-item__name"></div>
+                    <div class="cart-item__amount"></div>
+                </div>
+                <div class="cart-item__buttons">
+                    <button class="cart-item__button" data-remove>-</button>
+                    <button class="cart-item__button" data-add>+</button>
+                </div>
+            </div>
+        </div>
+        <div class="cart-item__price"></div>
+    </div>
+</template>
+</body>
+</html>
